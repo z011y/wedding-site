@@ -16,7 +16,6 @@
     "next-optimized-images": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-keyboard-event-handler": "^1.5.4",
     "react-number-format": "^4.4.1",
     "stripe": "^8.63.0",
     "styled-components": "^5.1.1"

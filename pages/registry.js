@@ -1,12 +1,26 @@
 import styled from "styled-components";
-import { useState } from "react";
-import KeyboardEventHandler from "react-keyboard-event-handler";
+import { useState, useEffect } from "react";
 
 import Layout from "../components/layout";
 import Payment from "../components/payment";
 
 export default function Registry() {
   const [active, setActive] = useState(false);
+
+  const handleKeydown = (e) => {
+    const keyName = e.key;
+
+    if (keyName === "Escape") {
+      setActive(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeydown, false);
+    return function cleanup() {
+      document.removeEventListener("keydown", handleKeydown, false);
+    };
+  });
 
   return (
     <Layout>
@@ -20,10 +34,6 @@ export default function Registry() {
             please consider donating through one of the methods below:
           </p>
         </Alert>
-        <KeyboardEventHandler
-          handleKeys={["esc"]}
-          onKeyEvent={() => setActive(false)}
-        />
 
         <Options>
           {active ? <Payment close={() => setActive(false)} /> : null}

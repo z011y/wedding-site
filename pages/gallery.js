@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
-import KeyboardEventHandler from "react-keyboard-event-handler";
+import { useState, useEffect } from "react";
 
 import Layout from "../components/layout";
 import Image from "../components/image";
@@ -101,6 +100,25 @@ export default function Gallery() {
     }
   };
 
+  const handleKeydown = (e) => {
+    const keyName = e.key;
+
+    if (keyName === "Escape") {
+      close();
+    } else if (keyName === "ArrowRight") {
+      right();
+    } else if (keyName === "ArrowLeft") {
+      left();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeydown, false);
+    return function cleanup() {
+      document.removeEventListener("keydown", handleKeydown, false);
+    };
+  });
+
   const renderImages = () => {
     return images.map((image) => {
       return (
@@ -122,11 +140,6 @@ export default function Gallery() {
     <Layout>
       <Content>
         <h1>gallery</h1>
-
-        <KeyboardEventHandler handleKeys={["right"]} onKeyEvent={right} />
-        <KeyboardEventHandler handleKeys={["left"]} onKeyEvent={left} />
-        <KeyboardEventHandler handleKeys={["esc"]} onKeyEvent={close} />
-
         <GridContainer>{renderImages()}</GridContainer>
       </Content>
     </Layout>
