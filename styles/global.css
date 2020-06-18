@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Libre Baskerville", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button {
+  border: 3px solid black;
+  background-color: black;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: none;
+}
