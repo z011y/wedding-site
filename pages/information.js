@@ -113,6 +113,23 @@ const Content = styled.div`
     width: 50%;
     align-self: center;
     margin-top: 50px;
+
+    @media (max-width: 925px) {
+      width: 75%;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 925px) {
+    padding: 50px;
+    padding-top: 100px;
+  }
+
+  @media (max-width: 800px) {
+    height: 100%;
   }
 `;
 
@@ -121,6 +138,11 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
 `;
 
 const Column = styled.div`
@@ -133,6 +155,11 @@ const Column = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
   p {
     text-align: center;
@@ -156,6 +183,14 @@ const Text = styled.p`
   width: 50vw;
   align-self: center;
   line-height: 40px;
+
+  @media (max-width: 925px) {
+    width: 75vw;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const Caption = styled.p`

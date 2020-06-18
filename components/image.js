@@ -51,6 +51,7 @@ const FullImg = styled.div`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 1001;
 `;
 
 const Img = styled.div`
@@ -83,6 +84,12 @@ const Close = styled.img`
   border-radius: 50px;
   height: 40px;
   width: 40px;
+  z-index: 1002;
+
+  @media (max-width: 925px) {
+    top: 12.5px;
+    right: 12.5px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -99,6 +106,11 @@ const Right = styled.img`
   border-radius: 50px;
   height: 40px;
   width: 40px;
+  z-index: 1002;
+
+  @media (max-width: 925px) {
+    right: 12.5px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -115,6 +127,11 @@ const Left = styled.img`
   border-radius: 50px;
   height: 40px;
   width: 40px;
+  z-index: 1002;
+
+  @media (max-width: 925px) {
+    left: 12.5px;
+  }
 
   &:hover {
     cursor: pointer;

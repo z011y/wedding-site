@@ -75,6 +75,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 925px) {
+    padding: 50px;
+    padding-top: 100px;
+  }
+
   h1 {
     margin-bottom: 30px;
   }
@@ -85,6 +90,11 @@ const Options = styled.div`
   width: 100%;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
 `;
 
 const Button = styled.button`
@@ -104,6 +114,11 @@ const Column = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
   p {
     text-align: center;

@@ -174,6 +174,10 @@ const Modal = styled.div`
   background-color: white;
   border: 5px solid black;
   position: relative;
+
+  @media (max-width: 800px) {
+    width: 75%;
+  }
 `;
 
 const Form = styled.form`

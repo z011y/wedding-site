@@ -152,6 +152,11 @@ const Content = styled.div`
   background-color: white;
   padding: 100px;
 
+  @media (max-width: 925px) {
+    padding: 50px;
+    padding-top: 100px;
+  }
+
   h1 {
     margin-bottom: 50px;
   }
@@ -159,7 +164,7 @@ const Content = styled.div`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 3rem;
 `;
 

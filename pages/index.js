@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <Layout>
       <Content>
-        <h1>join us August 15th</h1>
-        <Link href="/information" passHref>
-          <a>see more information</a>
-        </Link>
+        <Text>
+          <h1>join us August 15th</h1>
+          <Link href="/information" passHref>
+            <a>see more information</a>
+          </Link>
+        </Text>
       </Content>
     </Layout>
   );
@@ -22,20 +24,40 @@ const Content = styled.div`
   background-image: url("/home.png");
   background-size: cover;
   background-position: center;
+`;
+
+const Text = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding: 50px;
+    height: 200px;
+  }
 
   h1 {
     color: white;
-    position: absolute;
-    bottom: 100px;
-    left: 100px;
     font-size: 36px;
+
+    @media (max-width: 925px) {
+      font-size: 24px;
+    }
   }
 
   a {
     color: white;
-    position: absolute;
-    bottom: 100px;
-    right: 100px;
     font-size: 36px;
+
+    @media (max-width: 925px) {
+      font-size: 24px;
+    }
   }
 `;
