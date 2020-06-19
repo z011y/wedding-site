@@ -176,7 +176,8 @@ const Modal = styled.div`
   position: relative;
 
   @media (max-width: 800px) {
-    width: 75%;
+    width: 100%;
+    height: 100vh;
   }
 `;
 
@@ -209,6 +210,7 @@ const InputWrapper = styled.div`
     padding-left: 22px;
     font-size: 16px;
     background-color: #f5f5f5;
+    -webkit-appearance: none;
 
     &:focus,
     &:active {

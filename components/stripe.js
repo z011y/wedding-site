@@ -12,8 +12,8 @@ export default function Stripe({ amount, price }) {
     const { error } = await stripe.redirectToCheckout({
       lineItems: [{ price: price, quantity: 1 }],
       mode: "payment",
-      successUrl: "http://localhost:3000/success",
-      cancelUrl: "http://localhost:3000/cancel",
+      successUrl: "https://cameronandnicole.com/success",
+      cancelUrl: "https://cameronandnicole.com/cancel",
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer

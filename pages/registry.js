@@ -78,6 +78,7 @@ const Content = styled.div`
   @media (max-width: 925px) {
     padding: 50px;
     padding-top: 100px;
+    height: 100%;
   }
 
   h1 {
