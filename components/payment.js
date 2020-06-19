@@ -129,7 +129,7 @@ const Container = styled.div`
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.5);
   background-position: center;
   background-size: contain;
@@ -146,6 +146,7 @@ const Close = styled.img`
   position: absolute;
   background-color: white;
   border-radius: 50px;
+  z-index: 1002;
 
   &:hover {
     cursor: pointer;
@@ -159,6 +160,7 @@ const Back = styled.img`
   left: 50px;
   background-color: white;
   border-radius: 50px;
+  z-index: 1002;
 
   &:hover {
     cursor: pointer;
@@ -174,8 +176,10 @@ const Modal = styled.div`
   background-color: white;
   border: 5px solid black;
   position: relative;
+  z-index: 1001;
 
   @media (max-width: 800px) {
+    position: fixed;
     width: 100%;
     height: 100vh;
   }
